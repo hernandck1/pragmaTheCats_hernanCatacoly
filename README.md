@@ -1,6 +1,4 @@
-# pragmaTheCats_hernanCatacoly
-
-Proyecto creado para Prueba de conocimiento en la empresa Pragma.
+ # Proyecto creado para Prueba de conocimiento en la empresa Pragma.
 
 
 
