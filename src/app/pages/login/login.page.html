@@ -1,0 +1,41 @@
+<ion-content>
+  <div class="container">
+    <div class="forms-container">
+      <div class="signin-signup">
+        <form class="sign-in-form">
+          <h2 class="subtituloIS">Inicio de Sesión</h2>
+          <div class="input-field">
+            <fa-icon [icon]="faEnvelope" class="fas"></fa-icon>
+            <ion-input class="inputTxt" type="text" placeholder="Correo electrónico" [(ngModel)]='login.mail'
+              [ngModelOptions]="{standalone: true}">
+            </ion-input>
+          </div>
+          <div class="input-field2">
+            <fa-icon [icon]="faPass" class="fas"></fa-icon>
+            <ion-input class="inputTxt" [type]="hide ? 'password' : 'text'" placeholder="Clave" [(ngModel)]='login.pass'
+              [ngModelOptions]="{standalone: true}"></ion-input>
+            <ion-icon class="fasPass" slot="end" [name]="hide ? 'eye' : 'eye-off'" (click)="hide = !hide"></ion-icon>
+          </div>
+          <br>
+          <div class="ion-text-center">
+            <ion-chip color='dark' class="chip" (click)='IniSession(login)'>
+              Entrar
+            </ion-chip>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="panels-container">
+      <div class="panel left-panel">
+        <div class="content">
+          <h3 class="titulo">
+            <img src="assets/img/logo.png" class="fade-in" style="max-width: 80%">
+            <span class="tamtituloSub"><br><b>The cats</b><br>Pragma Test </span>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

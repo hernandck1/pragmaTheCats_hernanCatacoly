@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,90 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@font-face {
+    font-family: "montserrat";
+    src: url(assets/fonts/Montserrat.ttf);
+}
+
+* {
+    font-family: "montserrat";
+}
+
+.loaderFull {
+    --spinner-color: var(--ion-color-dark);
+    --background: none !important;
+    backdrop-filter: blur(2.5px);
+    text-align: center !important;
+    color: black;
+    font-size: 14px !important;
+    font-family: "montserrat" !important;
+}
+
+.colorBG {
+    --background: none !important;
+    background: linear-gradient(156deg, rgba(70, 70, 70, 0.253) 44%, rgba(255, 255, 255, 0.158) 100%);
+}
+
+.titleHeaderPpal {
+    font-size: 14px !important;
+    font-family: "montserrat";
+    color: black;
+}
+
+.titlePpal {
+    color: var(--ion-color-light);
+    font-size: 12px !important;
+    font-weight: bold;
+}
+
+.fondoApp {
+    --background: none;
+    --background: url("assets/img/fondo.jpg") 0 0/100% 100% no-repeat;
+}
+
+.colorR {
+    color: var(--ion-color-plwr);
+}
+
+.posIconSalir {
+    float: right;
+    padding-right: 14px;
+}
+
+.tamIconSalir {
+    height: 25px !important;
+}
+
+.alertas {
+    font-family: "montserrat";
+    font-size: 16px !important;
+    button {
+        color: var(--ion-color-violeta) !important;
+    }
+    .alert-sub-title.sc-ion-alert-ios {
+        font-size: 16px;
+    }
+
+    .alert-message.sc-ion-alert-ios,
+    .alert-input-group.sc-ion-alert-ios {
+        font-size: 15px !important;
+    }
+}
+
+.native-input:disabled {
+    opacity: 1 !important;
+    --placeholder-opacity: 1 !important;
+}
+
+ion-label {
+    opacity: 1 !important;
+}
+
+.native-textarea[disabled].sc-ion-textarea-ios {
+    opacity: 1 !important;
+}
+
+.native-textarea[disabled].sc-ion-textarea-md {
+    opacity: 1 !important;
+}

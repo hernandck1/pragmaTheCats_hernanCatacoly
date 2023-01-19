@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar class="colorBG">
+    <ion-title class="titlePpal">
+      <span class="titleHeaderPpal"><span class="colorR"> The Cats</span></span>
+    </ion-title>
+    <ion-buttons slot="end" class="posIconSalir" (click)="salir()">
+      <ion-img src="assets/icon/cerrar-sesion.png" class='tamIconSalir cursor'> </ion-img>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondoApp ion-padding">
+
+  <ion-searchbar mode='ios' placeholder='Busqueda de gatos' cancelButtonText='Cancelar' showCancelButton="focus"
+    type="text" animated (ionInput)="getItemsCats($event)">
+  </ion-searchbar>
+
+  <div *ngIf="existdatacats">
+
+    <div *ngFor="let cat of itemsCats">
+      <ion-card class="styleCard">
+        <ion-card-header>
+          <ion-card-title class="title">{{cat.name}}</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <img [src]="cat.imageUrl" class="imgStyle" />
+        </ion-card-content>
+
+        <ion-card-subtitle class="subTitle"><b>Pais origen:</b> {{cat.origin | titlecase}}</ion-card-subtitle>
+
+        <div class="ion-text-right">
+          <ion-chip color='dark' (click)='masInfo(cat)'>
+            <ion-label class="mainfo">Mas información</ion-label>
+            <ion-icon src='/assets/icon/masinfo.svg'></ion-icon>
+          </ion-chip>
+        </div>
+      </ion-card>
+    </div>
+
+  </div>
+
+
+
+</ion-content>

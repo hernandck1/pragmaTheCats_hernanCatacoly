@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      {{data.name}}
+    </ion-title>
+    <ion-buttons slot="end" class="posIconSalir" (click)="cerrarModal()">
+      <ion-img src="assets/icon/cerrar.svg" class='tamIconSalir cursor'> </ion-img>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="fondoApp ion-padding">
+
+  <div class="img">
+    <img [src]="data.imageUrl" class="imgStyle" />
+  </div>
+
+  <ion-item class="itemtrans">
+    <ion-label class="labelTxt" position='floating'>Adaptability</ion-label>
+    <ion-input class="inputTxt ion-text-capitalize" [value]="data.adaptability" disabled></ion-input>
+  </ion-item>
+
+  <ion-item class="itemtrans">
+    <ion-label class="labelTxt" position='floating'>Intelligence</ion-label>
+    <ion-input class="inputTxt ion-text-capitalize" [value]="data.intelligence" disabled></ion-input>
+  </ion-item>
+
+  <ion-item class="itemtrans">
+    <ion-label class="labelTxt" position='floating'>Temperament</ion-label>
+    <ion-textarea class="inputTxt" [autoGrow]="true" [value]="data.temperament" disabled></ion-textarea>
+
+  </ion-item>
+
+  <ion-item class="itemtrans">
+    <ion-label class="labelTxt" position='floating'>Adaptability</ion-label>
+    <ion-textarea class="inputTxt" [autoGrow]="true" [value]="data.description" disabled></ion-textarea>
+  </ion-item>
+
+
+
+
+
+</ion-content>
